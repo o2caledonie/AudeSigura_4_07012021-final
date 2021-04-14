@@ -10,12 +10,21 @@ body {
 a,
 button {
     transition: all .3s ease-in-out;
-    outline: none!important;
+}
+
+a{
+    color:#FFFFFF;
+    font-weight: 400;
 }
 
 a:hover {
     text-decoration: none;
     cursor: pointer;
+}
+
+a:focus {
+    outline: 3px dotted #b33f09;
+    outline-offset: 0px;
 }
 
 #page-loading-blocs-notifaction {
@@ -45,7 +54,7 @@ a:hover {
 }
 
 .bloc-lg {
-    padding: 100px 50px;
+    padding: 50px 50px 0px;
 }
 
 .bloc-md {
@@ -151,6 +160,10 @@ a:hover {
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
     color: rgba(255, 255, 255, 1);
+}
+
+.d-bloc a:focus .icon-md{
+    color:#FFFFFF;
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -272,6 +285,10 @@ a:hover {
     margin-top: 80px;
 }
 
+.blockquote {
+    margin: 0 3em;
+}
+
 .row-no-gutters {
     margin-right: 0;
     margin-left: 0;
@@ -301,6 +318,10 @@ a:hover {
     line-height: 44px;
 }
 
+.navbar-brand:focus{
+    outline-offset: -5px;
+}
+
 .navbar-brand img {
     max-height: 200px;
     margin: 0 5px 0 0;
@@ -317,15 +338,17 @@ a:hover {
 
 .navbar .nav {
     padding-top: 2px;
-    margin-right: -16px;
     float: right;
     z-index: 1;
+}
+
+.navbar-nav {
+    margin: 7.5px 0px;
 }
 
 .nav > li {
     float: left;
     margin-top: 4px;
-    font-size: 16px;
 }
 
 .navbar-nav .open .dropdown-menu > li > a {
@@ -334,7 +357,9 @@ a:hover {
 
 .nav > li a:hover,
 .nav > li a:focus {
-    background: transparent;
+    background: #FFFFFF;
+    outline-offset: -3px;
+    font-weight: bold;
 }
 
 .navbar-toggle {
@@ -344,6 +369,10 @@ a:hover {
 
 .navbar-toggle:hover {
     background: transparent!important;
+}
+
+.navbar-toggle:focus{
+    outline: 2px solid #b33f09;
 }
 
 .navbar-toggle .icon-bar {
@@ -361,6 +390,7 @@ a:hover {
     position: relative;
     z-index: 2;
 }
+
 
 @media (min-width: 768px) {
     .site-navigation {
@@ -460,8 +490,15 @@ nav .caret {
     background: rgba(0, 0, 0, .3);
 }
 
-button {
-    outline: none!important;
+
+.btn:focus {
+    outline: 3px dotted #ffffff;
+    outline-offset: 2px;
+}
+
+form > .btn-atomic-tangerine:hover, form > .btn-atomic-tangerine:focus{
+    outline: 3px dotted #b33f09;
+    outline-offset: -2px;
 }
 
 .btn-rd {
@@ -647,12 +684,13 @@ h5,
 h6,
 p,
 label,
-.btn,
-a {
+.btn
+{
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #575757;
 }
+
 
 .container {
     max-width: 1000px;
@@ -677,7 +715,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 1em;
 }
 
 .tight-width-whitespace {
@@ -692,16 +730,23 @@ p {
 
 .cta-hero {
     margin-top: 22px;
-    color: #FFFFFF!important;
+    color: #000000!important;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
     font-weight: 700;
 }
 
+
+
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
+}
+
+.social:focus{
+    outline: 2px dotted #ffffff!important;
+    outline-offset: 2px;
 }
 
 h2 {
@@ -748,12 +793,20 @@ h4 {
     margin-top: 50px;
 }
 
+.portfolio-row > .col-sm-6 a:focus {
+    outline-offset: 5px;
+}
+
+.col-sm-6{
+    padding-bottom: 20px;
+}
+
 .avatar {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(44, 42, 37, 0.7);
     padding: 40px 40px 40px 40px;
 }
 
@@ -771,7 +824,7 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #b33f09;
 }
 
 .tc-white {
@@ -780,12 +833,12 @@ h4 {
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+.btn-atomic-tangerine:hover,.btn-atomic-tangerine:focus {
+    background: #ffffff!important;
+    color: #b33f09!important;
+    text-decoration: underline;
 }
 
 .ltc-white {
@@ -794,6 +847,12 @@ h4 {
 
 .ltc-white:hover {
     color: #cccccc!important;
+}
+
+.ltc-white:focus {
+    color: #F3976C!important;
+    outline: 2px dotted #ffffff;
+    outline-offset: 4px;
 }
 
 .ltc-atomic-tangerine {
@@ -928,7 +987,7 @@ h4 {
         border-bottom: 1px solid rgba(0, 0, 0, .1);
         background: rgba(0, 0, 0, .05);
         text-align: left;
-        padding-left: 15px;
+        /* padding-left: 15px; */
         width: 100%;
     }
     .nav > li:hover {
