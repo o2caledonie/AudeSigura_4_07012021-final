@@ -36,6 +36,14 @@ a:focus {
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
+img{
+    width:100%;
+}
+
+.center-block {
+    width:30%;
+}
+
 .bloc {
     width: 100%;
     clear: both;
