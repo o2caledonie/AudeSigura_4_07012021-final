@@ -36,16 +36,6 @@ a:focus {
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
-.image-responsive{
-    width: 100%;
-    height:auto;
-}
-
-.center-block{
-    width:30%;
-    height: auto;
-}
-
 .bloc {
     width: 100%;
     clear: both;
@@ -335,7 +325,6 @@ a:focus {
 
 .navbar-brand img {
     max-height: 200px;
-    width: auto;
     margin: 0 5px 0 0;
     display: inline;
 }
